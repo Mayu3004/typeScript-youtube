@@ -1,28 +1,62 @@
 
-// const User = {
-//     name: "Mayur",
-//     email: "myur@loc.dev",
-//     isActive: true
+// // const User = {
+// //     name: "Mayur",
+// //     email: "myur@loc.dev",
+// //     isActive: true
+// // }
+
+// // function createUser({name: string, isPaid: boolean}){}
+
+// // createUser({name: "Mayur",isPaid:false});
+
+// // function createCourse():{name: string, price: number}{
+// //     return {name: "reactjs",price: 399}
+// // }
+
+// type User = {
+//     name: string;
+//     email: string;
+//     isActive: boolean
 // }
 
-// function createUser({name: string, isPaid: boolean}){}
+// function createUser (user: User): User{
 
-// createUser({name: "Mayur",isPaid:false});
-
-// function createCourse():{name: string, price: number}{
-//     return {name: "reactjs",price: 399}
+//     return {name: "",email:"",isActive: true}
 // }
+// createUser({name: "",email:"",isActive: true})
+
 
 type User = {
-    name: string;
-    email: string;
+    readonly _id: string
+    name: string
+    email:string
     isActive: boolean
+    creditCardDetails?: number //? is given to mark the field as optional
 }
 
-function createUser (user: User): User{
-
-    return {name: "",email:"",isActive: true}
+let myUser: User = {
+    _id: "1234",
+    name: "Mayur",
+    email: "mayu@loc.dev",
+    isActive: false
 }
-createUser({name: "",email:"",isActive: true})
+
+myUser.email = "h@gmail.com"
+// myUser._id = "asa"
+
+type cardNumber = {
+    cardnumber: string
+}
+type cardDate = {
+    cardDate: string
+}
+type cardDetails = cardNumber & cardDate &{
+    cvv: number
+}
+
+
+
+
+
 
 export{}
